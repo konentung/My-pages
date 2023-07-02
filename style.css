@@ -192,7 +192,6 @@ main {
 }
 
 .slogan {
-  
 }
 /*
 #slogan {
@@ -371,12 +370,10 @@ section a:hover {
   grid-template-columns: 1fr 3fr;
 }
 
-#pro-menu {
-  float: left;
-}
-
-.clear {
-  clear: both;
+.pro-area {
+  width: auto;
+  border-radius: 16px;
+  box-shadow: 0 24px 36px rgba(0, 0, 0, 0.25);
 }
 
 .pmt {
@@ -410,10 +407,6 @@ section a:hover {
 .h3-pro {
   font-size: x-large;
   text-align: center;
-}
-
-.pro-co {
-  float: left;
 }
 
 .co {
@@ -454,16 +447,97 @@ td {
 /*--------------Pla內文--------------*/
 
 .pla-arti {
-  display: flex;
-  flex-direction: column;
-  margin-left: 9rem;
-  margin-right: 27em;
+  /* display: flex;
+  flex-direction: column; */
+  margin-left: 12rem;
+  margin-right: 36em;
 }
 
 .pla-h3 {
   font-size: larger;
 }
 
+.accordion {
+  /* width: 800px; */
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+/* 
+.btn-ac {
+  background-color: transparent;
+} */
+
+.accordion p{
+  margin: 12px;
+}
+
+.item {
+  box-shadow: 0 0 32px rgba(0, 0, 0, 0.5);
+  padding: 24px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-row: 24px 1fr 1fr;
+  column-gap: 24px;
+  row-gap: 32px;
+  background-color: white;
+}
+
+.number,
+.text {
+  font-size: 24px;
+  color: #000;
+}
+
+/* .number {
+  color: #352208;
+} */
+
+.pla-icon {
+  padding-top: 12px;
+  height: 24px;
+  width: 24px;
+}
+
+.hidden-box {
+  grid-column: 2/3;
+  display: none;
+  color: #9647ff;
+}
+
+.hidden-box p {
+  color: #000;
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+
+.hidden-box ul {
+  margin-left: 20px;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.open {
+  border-top: 8px solid #9647ff;
+}
+
+.open {
+  background-color: #e1e4e2;
+}
+
+.open .hidden-box {
+  display: block;
+  color: #352208;
+}
+
+.open .number,
+.open .text,
+.open p {
+  color: #352208;
+}
 /*--------------Ani標題--------------*/
 
 .Ani-h2 {
@@ -508,7 +582,7 @@ td {
 
 /*--------------Gam內文--------------*/
 
-.Gam-arti{
+.Gam-arti {
   margin-left: 4rem;
   width: 80rem;
   display: flex;
@@ -517,60 +591,58 @@ td {
   justify-content: space-around;
 }
 
-.Gam-con{
+.Gam-con {
   width: 30rem;
   height: auto;
 }
 
-.Apex-d1{
+.Apex-d1 {
   width: 100%;
   height: auto;
 }
 
-.GI-v1{
+.GI-v1 {
   width: 100%;
   height: auto;
 }
 
-.link-arti{
+.link-arti {
   text-decoration: none;
   scale: 100%;
   border-color: rgba(0, 0, 0, 0);
   background-color: rgba(0, 0, 0, 0);
 }
 
-.link-arti:hover{
+.link-arti:hover {
   scale: 105%;
 }
 
-#GI-28B{
-
+#GI-28B {
 }
 
-.Gam-h3{
+.Gam-h3 {
   font-size: larger;
   text-align: center;
 }
 
-.Gam-h4{
+.Gam-h4 {
   font-size: 19px;
   text-align: center;
 }
 
-.Gam-tit{
+.Gam-tit {
   font-size: x-large;
   text-align: center;
 }
 
-.lit-arti{
+.lit-arti {
   text-align: center;
 }
 
-#GI2-8art{
-
+#GI2-8art {
 }
 
-.GI-v1-con{
+.GI-v1-con {
   width: 80%;
   height: auto;
 }
@@ -586,6 +658,9 @@ td {
 /*---------------文底---------------*/
 
 footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0px;
   padding-bottom: 2px;
   background-color: #e1e4e2;
   border-top: 1px solid #b9b8b8;
